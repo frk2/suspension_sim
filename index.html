@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motorcycle Suspension Simulator</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #1a1a2e; overflow: hidden; font-family: 'Courier New', monospace; }
+    #canvas-container { width: 100vw; height: 100vh; }
+    canvas { display: block; }
+    #hud {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #e0e0e0;
+      font-size: 14px;
+      line-height: 1.8;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 12px 16px;
+      border-radius: 6px;
+      pointer-events: none;
+      min-width: 260px;
+    }
+    #hud .label { color: #888; }
+    #hud .value { color: #fff; font-weight: bold; }
+    #hud .mode-free { color: #4fc3f7; }
+    #hud .mode-force { color: #ff8a65; }
+  </style>
+</head>
+<body>
+  <div id="canvas-container"></div>
+  <div id="hud">
+    <div><span class="label">Motion Ratio: </span><span class="value" id="hud-mr">—</span></div>
+    <div><span class="label">Spring Force: </span><span class="value" id="hud-force">—</span></div>
+    <div><span class="label">Wheel Rate: </span><span class="value" id="hud-wheelrate">—</span></div>
+    <div><span class="label">Sag: </span><span class="value" id="hud-sag">—</span></div>
+    <div><span class="label">Shock Compression: </span><span class="value" id="hud-comp">—</span></div>
+    <div><span class="label">Mode: </span><span class="value" id="hud-mode">Free</span></div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
